@@ -90,6 +90,9 @@ const login = async (req, res) => {
 const get_classes = async (req, res) => {
   try {
     const classes = await classDb.find({});
+
+    console.log(classes,77);
+    
     res.status(200).json({ classes });
   } catch (error) {
     console.log(error);
